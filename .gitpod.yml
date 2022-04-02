@@ -1,3 +1,14 @@
 tasks:
- - init: echo '(init) Now editing in gitpod'
-   command: echo '(command) Now editing in gitpod'
+ - name: Download & Install Dependencies
+   init:
+    echo 'downloading go packages'
+    go mod download && go mod verify
+
+ - name: Build App
+   init:
+    echo 'building app'
+    cd api/ && go build
+    
+vscode:
+  extensions:
+    - golang.Go
