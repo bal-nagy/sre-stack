@@ -1,0 +1,3 @@
+tasks:
+ - init: echo '(init) Now editing in gitpod'
+   command: echo '(command) Now editing in gitpod'
